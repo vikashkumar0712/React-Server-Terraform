@@ -25,7 +25,7 @@ resource "google_compute_instance" "vm-by-terraform" {
   }
   metadata_startup_script = file("${path.module}/script.sh")
   metadata = {
-    ssh-keys = "vikash:${file("~/.ssh/id_rsa.pub")}"
+    ssh-keys = "username:${file("~/.ssh/id_rsa.pub")}"
   }
 }
 
